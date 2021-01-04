@@ -13,6 +13,9 @@
     - oracle.oci
   connection: local
   pre_tasks:
+    - name: Installing oci python library using Ansible pip module
+      pip:
+        name: oci  
     - assert:
         that: 
           - tag_based is defined
