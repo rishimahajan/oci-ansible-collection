@@ -13,7 +13,9 @@
     - oracle.oci
   connection: local
   pre_tasks:
-
+    - name:
+      pip:
+        name: oci
     - assert:
         that: 
           - tag_based is defined
